@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    /* Apple-style premium dark aesthetic */
+    @apply bg-[#000000] text-[#f5f5f7] antialiased min-h-screen selection:bg-white/20 overflow-x-hidden relative;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    /* Subtle frosted glass effect used in premium Apple UIs */
+    @apply bg-white/[0.02] backdrop-blur-[40px] border border-white/[0.08];
+    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.5);
+  }
+
+  .premium-button {
+    /* Clean rounded cards with subtle depth */
+    @apply bg-[#1c1c1e] bg-opacity-80 backdrop-blur-3xl border border-white/[0.05] hover:bg-[#2c2c2e] hover:border-white/[0.1] hover:-translate-y-1 transition-all duration-500;
+    transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .text-gradient {
+    /* Soft premium gradient */
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-[#ffffff] via-[#a1a1a6] to-[#424245];
+  }
+}
+
+/* Very subtle and soft background lighting */
+.bg-glow-spot-1 {
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
+}
+
+.bg-glow-spot-2 {
+  background: radial-gradient(circle at center, rgba(160, 160, 160, 0.02) 0%, transparent 60%);
+}
