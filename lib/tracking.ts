@@ -25,7 +25,7 @@ export const handleLinkClick = (url: string, eventName: string) => {
         if (typeof window !== 'undefined') {
             window.open(urlObj.toString(), '_blank', 'noopener,noreferrer');
         }
-    } catch (e) {
+    } catch {
         // Fallback for relative paths or invalid URLs
         if (typeof window !== 'undefined') {
             window.open(url, '_blank', 'noopener,noreferrer');
